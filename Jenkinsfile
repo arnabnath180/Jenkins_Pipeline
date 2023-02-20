@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build b.c') {
             steps {
-                sh "chmod u+x a.c"
-                sh "gcc a.c"
+                sh "chmod u+x b.c"
+                sh "gcc b.c"
             }
         }
         stage('Execute b.c') {
