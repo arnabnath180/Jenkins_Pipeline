@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Git') {
             steps {
-                sh "git checkout main"
+                
                 git 'https://github.com/arnabnath180/Jenkins_Pipeline.git'
             }
         }
