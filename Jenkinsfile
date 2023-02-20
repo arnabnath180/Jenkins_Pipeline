@@ -9,13 +9,13 @@ pipeline {
         stage('Build b.c') {
             steps {
                 sh "chmod u+x b.c"
-                sh "gcc b.c -o b"
+                sh "gcc b.c"
             }
         }
         stage('Execute b.c') {
             steps {
-                sh "chmod u+x b"
-                sh "./b"
+                sh "chmod u+x a.out"
+                sh "./a.out"
             }
         }
         stage('Build Code') {
