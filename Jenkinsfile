@@ -8,14 +8,14 @@ pipeline {
         }
         stage('Build a.c') {
             steps {
-                sh "chmod u+x a.c"
-                sh "gcc a.c"
+                sh "chmod u+x b.c"
+                sh "gcc b.c -o b"
             }
         }
         stage('Execute a.c') {
             steps {
-                sh "chmod u+x a.out"
-                sh "./a.out"
+                sh "chmod u+x b"
+                sh "./b"
             }
         }
         stage('Build Code') {
