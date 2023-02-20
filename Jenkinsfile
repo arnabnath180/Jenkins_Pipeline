@@ -6,16 +6,16 @@ pipeline {
                 git 'https://github.com/arnabnath180/Jenkins_Pipeline.git'
             }
         }
-        stage('Build a.c') {
+        stage('Build c.c') {
             steps {
-                sh "chmod u+x a.c"
-                sh "gcc a.c"
+                sh "chmod u+x c.c"
+                sh "gcc c.c -o c"
             }
         }
         stage('Execute a.c') {
             steps {
-                sh "chmod u+x a.out"
-                sh "./a.out"
+                sh "chmod u+x c"
+                sh "./c"
             }
         }
         stage('Build Code') {
